@@ -1,8 +1,14 @@
-<!DOCTYPE html><html lang='th'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Love Survey</title><style>body{font-family:Arial;background:#ffeef5;max-width:700px;margin:auto;padding:20px}.card{background:#fff;padding:20px;border-radius:12px}label{display:block;margin-top:12px;font-weight:bold}input,textarea{width:100%;padding:10px}button{margin-top:20px;width:100%;padding:12px;background:#d63384;color:#fff;border:none;border-radius:8px}</style></head><body><div class='card'><h2>💖 แบบสอบถามความรู้สึก 💖</h2><form id='survey'>
-<label>1. รู้สึกยังไงเวลาได้คุยกับเรา?</label><input name='q1' required>
-<label>2. คิดว่าเราเป็นคนแบบไหน?</label><input name='q2' required>
+function createLoveQuestionnaire() {
+  var form = FormApp.create('💌 แบบสอบถามความรู้สึกของพลอยที่มีต่อเรา ❤️');
+
+  form.setDescription(
+    'แบบสอบถามนี้จัดทำขึ้นเพื่อสำรวจความรู้สึกของพลอยที่มีต่อเรา 😊\n\n' +
+    'ไม่มีคำตอบที่ผิดนะ ขอให้ตอบตามความรู้สึกจริง ๆ ได้เลย\n\n' +
+    'ปล. แบบสอบถามนี้อาจทำให้คนถามมเขินได้😳❤️'
+  );
+<label>2. เธอคิดว่าเราเป็นคนแบบไหน?</label><input name='q2' required>
 <label>3. ถ้าเราทักไปก่อน รู้สึกยังไง?</label><input name='q3' required>
-<label>4. เคยนึกถึงเราบ้างไหม?</label><input name='q4' required>
+<label>4. เธอชอบคนแบบไหน?</label><input name='q4' required>
 <label>5. อยากรู้จักเรามากขึ้นไหม?</label><input name='q5' required>
 <label>6. ถ้ามีโอกาส อยากไปเที่ยวด้วยกันไหม?</label><input name='q6' required>
 <label>7. คิดว่ามีโอกาสพัฒนาความสัมพันธ์ไหม?</label><input name='q7' required>
