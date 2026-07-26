@@ -1,113 +1,137 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แบบสอบถามความรู้สึก ❤️</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Thai",sans-serif;background:linear-gradient(135deg,#ffe3ec,#fff7fa);color:#4a2632;min-height:100vh;padding:20px}.container{max-width:680px;margin:auto}.card{background:#fff;border-radius:24px;padding:28px;box-shadow:0 12px 35px rgba(180,70,110,.15)}h1{text-align:center;color:#c03968;margin:0 0 10px;font-size:28px}.intro{text-align:center;line-height:1.8;color:#76515d;margin-bottom:24px}.question{border:1px solid #f2d5df;border-radius:18px;padding:18px;margin:16px 0;background:#fffafb}.question h3{font-size:17px;margin:0 0 14px;line-height:1.5}label{display:block;padding:12px 14px;margin:8px 0;border:1px solid #f1dce3;border-radius:12px;cursor:pointer}label:hover{background:#fff0f5;border-color:#e9a8bd}input[type=radio]{margin-right:9px;accent-color:#d44c7c}textarea{width:100%;min-height:100px;border:1px solid #e6cbd4;border-radius:12px;padding:12px;font-size:15px;resize:vertical}button{width:100%;border:0;border-radius:14px;padding:15px;background:#d94f7e;color:#fff;font-size:17px;font-weight:bold;cursor:pointer;margin-top:10px}button:hover{background:#c63f6d}.secondary{background:#7c5965}.secondary:hover{background:#60434d}.success,.answers{display:none;line-height:1.9}.answer{border-bottom:1px solid #f0dbe2;padding:12px 0}.answer b{display:block;color:#c03968}.small{font-size:13px;color:#9a7883;text-align:center;margin-top:15px}
-</style>
-</head>
-<body>
-<div class="container">
-<div class="card" id="formCard">
-<h1>💌 แบบสอบถามความรู้สึกของคุณที่มีต่อเรา ❤️</h1>
-<div class="intro">แบบสอบถามนี้จัดทำขึ้นเพื่อสำรวจความรู้สึกของคุณที่มีต่อเรา 😊<br>ไม่มีคำตอบที่ผิดนะครับ ขอให้ตอบตามความรู้สึกจริง ๆ ได้เลย<br><b>ปล. แบบสอบถามนี้อาจทำให้คนตอบเขินได้ 😳❤️</b></div>
-<form id="loveForm">
-<div class="question"><h3>1. ตอนนี้คุณรู้สึกอย่างไรเวลาคุยกับเรา? <span class="required">*</span></h3>
-<label><input type="radio" name="q1" required>😊 รู้สึกดี คุยแล้วสบายใจ</label><label><input type="radio" name="q1">😳 มีเขินบ้างนิดหน่อย</label><label><input type="radio" name="q1">🤭 รู้สึกดีมากกว่าที่คิด</label><label><input type="radio" name="q1">🤔 ยังไม่แน่ใจเหมือนกัน</label><label><input type="radio" name="q1">😅 ก็รู้สึกปกตินะ</label></div>
-<div class="question"><h3>2. คุณคิดว่าเราเป็นคนแบบไหนในสายตาคุณ? <span class="required">*</span></h3>
-<label><input type="radio" name="q2" required>😊 น่ารัก / น่าเอ็นดู</label><label><input type="radio" name="q2">😎 เท่ / มีเสน่ห์</label><label><input type="radio" name="q2">🤭 น่าสนใจ อยากรู้จักมากขึ้น</label><label><input type="radio" name="q2">😳 เป็นคนที่ทำให้ใจเต้นบ้าง</label><label><input type="radio" name="q2">😅 เป็นเพื่อนที่ดี</label><label><input type="radio" name="q2">🤔 ยังไม่รู้จักกันมากพอ</label></div>
-<div class="question"><h3>3. ถ้าเราทักไปคุยก่อน คุณรู้สึกอย่างไร? <span class="required">*</span></h3>
-<label><input type="radio" name="q3" required>❤️ ดีใจนะ อยากคุยด้วย</label><label><input type="radio" name="q3">😊 รู้สึกดี</label><label><input type="radio" name="q3">😳 แอบเขินนิด ๆ</label><label><input type="radio" name="q3">🤔 แล้วแต่อารมณ์</label><label><input type="radio" name="q3">😅 ไม่ได้รู้สึกอะไรเป็นพิเศษ</label></div>
-<div class="question"><h3>4. คุณเคยคิดถึงเราบ้างไหม? <span class="required">*</span></h3>
-<label><input type="radio" name="q4" required>❤️ คิดถึงบ่อยนะ</label><label><input type="radio" name="q4">😊 มีบ้าง</label><label><input type="radio" name="q4">😳 เคยคิดถึง แต่ไม่กล้าบอก</label><label><input type="radio" name="q4">🤔 ไม่แน่ใจ</label><label><input type="radio" name="q4">😅 ยังไม่เคยเลย</label></div>
-<div class="question"><h3>5. ถ้าเราอยากทำความรู้จักคุณให้มากขึ้น คุณโอเคไหม? <span class="required">*</span></h3>
-<label><input type="radio" name="q5" required>❤️ โอเคมาก อยากรู้จักกันมากขึ้นเหมือนกัน</label><label><input type="radio" name="q5">😊 ได้สิ</label><label><input type="radio" name="q5">😳 ก็ลองดูได้นะ</label><label><input type="radio" name="q5">🤔 ขอเวลาคิดดูก่อน</label><label><input type="radio" name="q5">😅 อยากเป็นเพื่อนกันมากกว่า</label></div>
-<div class="question"><h3>6. ถ้าเราชวนคุณไปกินข้าวหรือไปเที่ยวด้วยกัน คุณจะ… <span class="required">*</span></h3>
-<label><input type="radio" name="q6" required>😳 ตอบตกลงทันที</label><label><input type="radio" name="q6">❤️ อยากไปนะ</label><label><input type="radio" name="q6">😊 ขอคิดดูก่อน</label><label><input type="radio" name="q6">🤭 แล้วแต่สถานที่และโอกาส</label><label><input type="radio" name="q6">😅 ไว้โอกาสหน้าดีกว่า</label></div>
-<div class="question"><h3>7. คุณคิดว่าเรามีโอกาสพัฒนาความสัมพันธ์กันไหม? <span class="required">*</span></h3>
-<label><input type="radio" name="q7" required>❤️ มีสิ</label><label><input type="radio" name="q7">😳 มีโอกาสนะ</label><label><input type="radio" name="q7">😊 อาจจะ ถ้าได้รู้จักกันมากขึ้น</label><label><input type="radio" name="q7">🤔 ยังไม่แน่ใจ</label><label><input type="radio" name="q7">🤍 คิดว่าเป็นเพื่อนกันน่าจะดีที่สุด</label></div>
-<div class="question"><h3>8. ถ้าเราบอกว่า “เรารู้สึกดีเวลาที่ได้คุยกับคุณ” คุณจะรู้สึกยังไง? <span class="required">*</span></h3>
-<label><input type="radio" name="q8" required>😳 เขินนะ แต่รู้สึกดีมาก</label><label><input type="radio" name="q8">❤️ รู้สึกดีเหมือนกัน</label><label><input type="radio" name="q8">😊 ขอบคุณนะ</label><label><input type="radio" name="q8">🤔 ไม่รู้จะตอบยังไงดี</label><label><input type="radio" name="q8">😅 ขอเป็นเพื่อนกันนะ</label></div>
-<div class="question"><h3>9. ถ้าคุณสามารถบอกอะไรกับเราได้ 1 อย่าง ตอนนี้คุณอยากบอกอะไร? 💌</h3><textarea name="q9" placeholder="ตอบตามความรู้สึกได้เลยนะครับ 😊"></textarea></div>
-<div class="question"><h3>10. ถ้าเราขออนุญาตจีบคุณ… คุณจะอนุญาตไหมครับ? 😳 <span class="required">*</span></h3>
-<label><input type="radio" name="q10" required>❤️ อนุญาตครับ/ค่ะ</label><label><input type="radio" name="q10">😳 อนุญาตก็ได้…แต่ต้องพยายามหน่อยนะ</label><label><input type="radio" name="q10">🤭 ลองดูก็ได้</label><label><input type="radio" name="q10">🤔 ขอเวลาคิดก่อน</label><label><input type="radio" name="q10">😊 เป็นเพื่อนกันก่อนนะ</label></div>
-<button type="submit">ส่งคำตอบ 💌</button>
-<button type="button" class="secondary" onclick="showAnswers()">🔐 ดูคำตอบที่บันทึกไว้</button>
-</form><div class="small">คำตอบจะถูกบันทึกไว้ในเบราว์เซอร์เครื่องนี้</div>
-</div>
+function createLoveQuestionnaire() {
+  var form = FormApp.create('💌 แบบสอบถามความรู้สึกของคุณที่มีต่อเรา ❤️');
 
-<div class="card success" id="successCard">
-<h1>ขอบคุณที่ตอบแบบสอบถามนะครับ 😊❤️</h1>
-<p>ไม่ว่าคำตอบของคุณจะเป็นแบบไหน<br>ผมก็ดีใจที่ได้รู้จักคุณนะ ❤️</p>
-<p>แต่ถ้าคุณตอบว่า <b>“อนุญาตให้จีบ”</b>…<br>ผมขอถือว่านี่เป็นสัญญาณว่า<br><b>ผมสามารถเดินหน้าจีบคุณต่อได้แล้วนะครับ 😳❤️</b></p>
-<button onclick="showAnswers()">🔐 ดูคำตอบ</button>
-<button class="secondary" onclick="backToForm()">กลับไปหน้าแบบสอบถาม</button>
-</div>
+  form.setDescription(
+    'แบบสอบถามนี้จัดทำขึ้นเพื่อสำรวจความรู้สึกของคุณที่มีต่อเรา 😊\n\n' +
+    'ไม่มีคำตอบที่ผิดนะครับ ขอให้ตอบตามความรู้สึกจริง ๆ ได้เลย\n\n' +
+    'ปล. แบบสอบถามนี้อาจทำให้คนตอบเขินได้ โปรดเตรียมใจไว้ด้วยนะครับ 😳❤️'
+  );
 
-<div class="card answers" id="answersCard">
-<h1>🔐 คำตอบที่บันทึกไว้ ❤️</h1>
-<div id="answersContent"></div>
-<button class="secondary" onclick="backToForm()">กลับไปหน้าแบบสอบถาม</button>
-<button onclick="clearAnswers()">🗑️ ลบคำตอบที่บันทึกไว้</button>
-</div>
-</div>
+  // คำถามที่ 1
+  form.addMultipleChoiceItem()
+    .setTitle('ตอนนี้คุณรู้สึกอย่างไรเวลาคุยกับเรา?')
+    .setChoiceValues([
+      '😊 รู้สึกดี คุยแล้วสบายใจ',
+      '😳 มีเขินบ้างนิดหน่อย',
+      '🤭 รู้สึกดีมากกว่าที่คิด',
+      '🤔 ยังไม่แน่ใจเหมือนกัน',
+      '😅 ก็รู้สึกปกตินะ'
+    ])
+    .setRequired(true);
 
-<script>
-const questions = [
-'1. ตอนนี้คุณรู้สึกอย่างไรเวลาคุยกับเรา?',
-'2. คุณคิดว่าเราเป็นคนแบบไหนในสายตาคุณ?',
-'3. ถ้าเราทักไปคุยก่อน คุณรู้สึกอย่างไร?',
-'4. คุณเคยคิดถึงเราบ้างไหม?',
-'5. ถ้าเราอยากทำความรู้จักคุณให้มากขึ้น คุณโอเคไหม?',
-'6. ถ้าเราชวนคุณไปกินข้าวหรือไปเที่ยวด้วยกัน คุณจะ…',
-'7. คุณคิดว่าเรามีโอกาสพัฒนาความสัมพันธ์กันไหม?',
-'8. ถ้าเราบอกว่า “เรารู้สึกดีเวลาที่ได้คุยกับคุณ” คุณจะรู้สึกยังไง?',
-'9. ถ้าคุณสามารถบอกอะไรกับเราได้ 1 อย่าง ตอนนี้คุณอยากบอกอะไร?',
-'10. ถ้าเราขออนุญาตจีบคุณ… คุณจะอนุญาตไหมครับ?'
-];
+  // คำถามที่ 2
+  form.addMultipleChoiceItem()
+    .setTitle('คุณคิดว่าเราเป็นคนแบบไหนในสายตาคุณ?')
+    .setChoiceValues([
+      '😊 น่ารัก / น่าเอ็นดู',
+      '😎 เท่ / มีเสน่ห์',
+      '🤭 น่าสนใจ อยากรู้จักมากขึ้น',
+      '😳 เป็นคนที่ทำให้ใจเต้นบ้าง',
+      '😅 เป็นเพื่อนที่ดี',
+      '🤔 ยังไม่รู้จักกันมากพอ'
+    ])
+    .setRequired(true);
 
-document.getElementById('loveForm').addEventListener('submit', function(e){
- e.preventDefault();
- const data={time:new Date().toLocaleString('th-TH')};
- for(let i=1;i<=10;i++){
-   const checked=document.querySelector(`[name="q${i}"]:checked`);
-   data['q'+i]=checked?checked.parentElement.innerText.trim():(document.querySelector(`[name="q${i}"]`)?.value||'');
- }
- localStorage.setItem('loveAnswers',JSON.stringify(data));
- document.getElementById('formCard').style.display='none';
- document.getElementById('successCard').style.display='block';
- window.scrollTo({top:0,behavior:'smooth'});
-});
+  // คำถามที่ 3
+  form.addMultipleChoiceItem()
+    .setTitle('ถ้าเราทักไปคุยก่อน คุณรู้สึกอย่างไร?')
+    .setChoiceValues([
+      '❤️ ดีใจนะ อยากคุยด้วย',
+      '😊 รู้สึกดี',
+      '😳 แอบเขินนิด ๆ',
+      '🤔 แล้วแต่อารมณ์',
+      '😅 ไม่ได้รู้สึกอะไรเป็นพิเศษ'
+    ])
+    .setRequired(true);
 
-function showAnswers(){
- const data=JSON.parse(localStorage.getItem('loveAnswers'));
- document.getElementById('formCard').style.display='none';
- document.getElementById('successCard').style.display='none';
- document.getElementById('answersCard').style.display='block';
- const box=document.getElementById('answersContent');
- if(!data){box.innerHTML='<p style="text-align:center">ยังไม่มีคำตอบที่บันทึกไว้ครับ 😊</p>';return;}
- let html='<p><b>เวลาที่ตอบ:</b> '+data.time+'</p>';
- for(let i=1;i<=10;i++) html+='<div class="answer"><b>'+questions[i-1]+'</b>'+escapeHtml(data['q'+i]||'-')+'</div>';
- box.innerHTML=html;
- window.scrollTo({top:0,behavior:'smooth'});
+  // คำถามที่ 4
+  form.addMultipleChoiceItem()
+    .setTitle('คุณเคยคิดถึงเราบ้างไหม?')
+    .setChoiceValues([
+      '❤️ คิดถึงบ่อยนะ',
+      '😊 มีบ้าง',
+      '😳 เคยคิดถึง แต่ไม่กล้าบอก',
+      '🤔 ไม่แน่ใจ',
+      '😅 ยังไม่เคยเลย'
+    ])
+    .setRequired(true);
+
+  // คำถามที่ 5
+  form.addMultipleChoiceItem()
+    .setTitle('ถ้าเราอยากทำความรู้จักคุณให้มากขึ้น คุณโอเคไหม?')
+    .setChoiceValues([
+      '❤️ โอเคมาก อยากรู้จักกันมากขึ้นเหมือนกัน',
+      '😊 ได้สิ',
+      '😳 ก็ลองดูได้นะ',
+      '🤔 ขอเวลาคิดดูก่อน',
+      '😅 อยากเป็นเพื่อนกันมากกว่า'
+    ])
+    .setRequired(true);
+
+  // คำถามที่ 6
+  form.addMultipleChoiceItem()
+    .setTitle('ถ้าเราชวนคุณไปกินข้าวหรือไปเที่ยวด้วยกัน คุณจะ…')
+    .setChoiceValues([
+      '😳 ตอบตกลงทันที',
+      '❤️ อยากไปนะ',
+      '😊 ขอคิดดูก่อน',
+      '🤭 แล้วแต่สถานที่และโอกาส',
+      '😅 ไว้โอกาสหน้าดีกว่า'
+    ])
+    .setRequired(true);
+
+  // คำถามที่ 7
+  form.addMultipleChoiceItem()
+    .setTitle('คุณคิดว่าเรามีโอกาสพัฒนาความสัมพันธ์กันไหม?')
+    .setChoiceValues([
+      '❤️ มีสิ',
+      '😳 มีโอกาสนะ',
+      '😊 อาจจะ ถ้าได้รู้จักกันมากขึ้น',
+      '🤔 ยังไม่แน่ใจ',
+      '🤍 คิดว่าเป็นเพื่อนกันน่าจะดีที่สุด'
+    ])
+    .setRequired(true);
+
+  // คำถามที่ 8
+  form.addMultipleChoiceItem()
+    .setTitle('ถ้าเราบอกว่า… “เรารู้สึกดีเวลาที่ได้คุยกับคุณ” คุณจะรู้สึกยังไง?')
+    .setChoiceValues([
+      '😳 เขินนะ แต่รู้สึกดีมาก',
+      '❤️ รู้สึกดีเหมือนกัน',
+      '😊 ขอบคุณนะ',
+      '🤔 ไม่รู้จะตอบยังไงดี',
+      '😅 ขอเป็นเพื่อนกันนะ'
+    ])
+    .setRequired(true);
+
+  // คำถามที่ 9
+  form.addTextItem()
+    .setTitle('ถ้าคุณสามารถบอกอะไรกับเราได้ 1 อย่าง ตอนนี้คุณอยากบอกอะไร? 💌')
+    .setHelpText('💬 ตอบตามความรู้สึกได้เลยนะครับ ไม่มีคำตอบผิด 😊');
+
+  // คำถามที่ 10
+  form.addMultipleChoiceItem()
+    .setTitle('ถ้าเราขออนุญาตจีบคุณ… คุณจะอนุญาตไหมครับ? 😳')
+    .setChoiceValues([
+      '❤️ อนุญาตครับ/ค่ะ',
+      '😳 อนุญาตก็ได้…แต่ต้องพยายามหน่อยนะ',
+      '🤭 ลองดูก็ได้',
+      '🤔 ขอเวลาคิดก่อน',
+      '😊 เป็นเพื่อนกันก่อนนะ'
+    ])
+    .setRequired(true);
+
+  // ข้อความหลังส่งแบบสอบถาม
+  form.setConfirmationMessage(
+    'ขอบคุณที่สละเวลามาตอบแบบสอบถามนะครับ 😊❤️\n\n' +
+    'ไม่ว่าคำตอบของคุณจะเป็นแบบไหน ผมก็ดีใจที่ได้รู้จักคุณนะ\n\n' +
+    'แต่ถ้าคุณตอบว่า “อนุญาตให้จีบ”…\n\n' +
+    'ผมขอถือว่านี่เป็นสัญญาณว่า\n' +
+    'ผมสามารถเดินหน้าจีบคุณต่อได้แล้วนะครับ 😳❤️\n\n' +
+    'ปล. จริง ๆ แล้วแบบสอบถามนี้มีคำถามเดียวที่ผมอยากรู้ที่สุด…\n' +
+    'คุณจะเปิดใจให้ผมเข้าไปอยู่ในใจได้ไหมครับ? ☺️❤️'
+  );
+
+  Logger.log('ลิงก์สำหรับส่งให้เขา: ' + form.getPublishedUrl());
+  Logger.log('ลิงก์สำหรับแก้ไขฟอร์ม: ' + form.getEditUrl());
 }
-function backToForm(){
- document.getElementById('formCard').style.display='block';
- document.getElementById('successCard').style.display='none';
- document.getElementById('answersCard').style.display='none';
- window.scrollTo({top:0,behavior:'smooth'});
-}
-function clearAnswers(){
- if(confirm('ต้องการลบคำตอบที่บันทึกไว้ใช่ไหมครับ?')){
-  localStorage.removeItem('loveAnswers');
-  showAnswers();
- }
-}
-function escapeHtml(text){
- const div=document.createElement('div');div.textContent=text;return div.innerHTML;
-}
-</script>
-</body>
-</html>
